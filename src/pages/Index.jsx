@@ -42,10 +42,10 @@ const Index = () => {
           isClosable: true,
         });
       } else {
-        const errorData = await response.json();
+        const errorData = await response.text();
         toast({
           title: "Login Failed",
-          description: errorData.error,
+          description: errorData,
           status: "error",
           duration: 3000,
           isClosable: true,
@@ -75,10 +75,10 @@ const Index = () => {
           isClosable: true,
         });
       } else {
-        const errorData = await response.json();
+        const errorData = await response.text();
         toast({
           title: "Signup Failed",
-          description: errorData.error,
+          description: errorData,
           status: "error",
           duration: 3000,
           isClosable: true,
